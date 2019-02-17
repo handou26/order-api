@@ -33,12 +33,12 @@
 		    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
         
-        <dependency>
+		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
         
-        <!--引入的zipkin依赖-->
+      		  <!--引入的zipkin依赖-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-zipkin</artifactId>
@@ -51,14 +51,14 @@
 		</dependency>
 		
 		   <!-- alibaba的druid数据库连接池 -->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid-spring-boot-starter</artifactId>
-            <version>1.1.9</version>
-        </dependency>
+		<dependency>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>druid-spring-boot-starter</artifactId>
+		    <version>1.1.9</version>
+		</dependency>
         
-        <!--引入的mysql-->
-       <dependency>
+		<!--引入的mysql-->
+	       <dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
