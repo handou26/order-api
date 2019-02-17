@@ -1,0 +1,42 @@
+server:
+  port: 8090
+  servlet:
+    session:
+      timeout: 10
+     
+spring :
+   application :
+      name : orderService  
+   zipkin:
+     base-url: http://localhost:7777
+     locator:
+        discovery:
+            enabled: true
+   sleuth:
+    sampler:
+      probability: 1.0
+    web:  
+           skipPattern : (^cleanup.*)     
+ 
+   datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://124.205.124.254:3306/eq_serach?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=GMT%2B8
+      username: root
+      password: shhc2015
+
+        
+
+        
+#### mybatis配置
+mybatis:
+  #mapper.xml所在位置
+  mapper-locations: classpath:mapping/*.xml
+  #实体类所做包
+  type-aliases-package: com.jd.model
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+             
+eureka:
+  client:
+    serviceUrl:
+      default-zone: http://localhost:8761/eureka/
