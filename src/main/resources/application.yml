@@ -20,9 +20,9 @@ spring :
  
    datasource:
       driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://124.205.124.254:3306/eq_serach?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=GMT%2B8
+      url: jdbc:mysql://localhost:3306/eq_serach?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=GMT%2B8
       username: root
-      password: shhc2015
+      password: 1234
 
         
 
