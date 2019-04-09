@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
-@FeignClient(value="userService",fallback=FeginUserError.class)
+@FeignClient(value="userService",fallbackFactory=FallbackUserService.class)
 public interface FeginUserService {
 	
 	 @RequestMapping(value = "/user", method = RequestMethod.GET)

@@ -10,10 +10,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.jd.api.FeginUserService;
-import com.jd.model.Patient;
-import com.jd.service.PatientService;
+import com.jd.service.OrderService;
+import com.jd.util.ResponseEntity;
 
 @RestController
 public class OrderController {
@@ -25,7 +24,7 @@ public class OrderController {
 	private String hostname;
 	
 	@Resource
-	private PatientService patientService;
+	private OrderService orderService;
 	
 	
 	@Autowired
@@ -38,10 +37,10 @@ public class OrderController {
 		
 	}
 	
-	@RequestMapping("getPatients")
-	public List<Patient> getPatients(){
+	@RequestMapping("orderlist")
+	public ResponseEntity orderlist(){
 		
-		 return patientService.all();
+		 return orderService.orderlist();
 		
 	}
 }

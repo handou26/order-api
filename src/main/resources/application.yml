@@ -1,5 +1,5 @@
 server:
-  port: 8090
+  port: 8092
   servlet:
     session:
       timeout: 10
@@ -20,13 +20,11 @@ spring :
  
    datasource:
       driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://124.205.124.254:3306/eq_serach?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=GMT%2B8
+      url: jdbc:mysql://localhost:3306/order?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=GMT%2B8
       username: root
-      password: shhc2015
+      password: 1234
 
-        
 
-        
 #### mybatis配置
 mybatis:
   #mapper.xml所在位置
@@ -40,3 +38,7 @@ eureka:
   client:
     serviceUrl:
       default-zone: http://localhost:8761/eureka/
+      
+feign:
+  hystrix:
+    enabled: true
